@@ -2,6 +2,6 @@
 {
     Elf,
     Human,
-    Dwarfs,
+    Dwarf,
     Undead
 }
