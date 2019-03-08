@@ -5,9 +5,9 @@ using UnityEngine;
 public class Turn : MonoBehaviour
 {
     [SerializeField]
-    private Team _team;
+    private Team team;
 
-    public Team Team => _team;
+    public Team Team => team;
 
     public int MoveAmount { get; private set; }
 

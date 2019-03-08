@@ -6,16 +6,16 @@ using UnityEngine;
 public class TurnManager : MonoBehaviour
 {
     [SerializeField]
-    private Turn[] _startTurns;
+    private Turn[] startTurns;
 
-    private Dictionary<Team, Turn> _turns = new Dictionary<Team, Turn>();
+    private Dictionary<Team, Turn> turns = new Dictionary<Team, Turn>();
     
     public Turn CurrentTurn { get; private set;}
 
     public event Action<Turn> OnTurnChanged;
 
     private void Awake() {
-        foreach (var turn in _startTurns){
+        foreach (var turn in startTurns){
             if (turn)
                 AddTeam(turn);
         }
@@ -23,34 +23,34 @@ public class TurnManager : MonoBehaviour
 
     public void AddTeam(Turn turn){
         var team = turn.Team;
-        if (_turns.ContainsKey(team))
+        if (turns.ContainsKey(team))
             return;
 
-        _turns.Add(team, turn);
+        turns.Add(team, turn);
     }
 
     public void RemoveTeam(Team team){
-        if (_turns.ContainsKey(team))
+        if (turns.ContainsKey(team))
             return;
 
-        _turns.Remove(team);
+        turns.Remove(team);
     }
 
     public Turn GetTurn(Team team){
-        if(!_turns.ContainsKey(team))
+        if(!turns.ContainsKey(team))
             return null;
 
-        return _turns[team];
+        return turns[team];
     }
 
     public void SetTurn(Team team){
 
-        if (!_turns.ContainsKey(team))
+        if (!turns.ContainsKey(team))
             return;
 
         CurrentTurn?.StopTurn();
 
-        CurrentTurn = _turns[team];
+        CurrentTurn = turns[team];
 
         CurrentTurn?.StartTurn();
 
@@ -79,7 +79,7 @@ public class TurnManager : MonoBehaviour
 
             var newTeam = (Team)currentTeamNumber;
 
-            if (!_turns.ContainsKey(newTeam))
+            if (!turns.ContainsKey(newTeam))
                 continue;
 
             nexTeam = newTeam;
