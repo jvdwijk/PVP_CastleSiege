@@ -9,6 +9,7 @@ public class Pawn : MonoBehaviour
     private Team pawnTeam = 0;
     private TeamController teamController;
 
+    public PawnMovement Movement => movement;
 
     public void Init(TeamController team){
         teamController = team;
@@ -16,7 +17,7 @@ public class Pawn : MonoBehaviour
     }
 
     public void GetHit(){
-        SetToSpawn(teamController.SpawnLocation);
+        SetToSpawn(teamController.SpawnLocation.TileIndex);
     }
 
     public void SetToSpawn(int spawnPoint){

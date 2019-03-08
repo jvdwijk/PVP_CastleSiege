@@ -9,11 +9,13 @@ public class TeamController : MonoBehaviour
     [SerializeField]
     private Team currentTeam;
     [SerializeField]
-    private int spawnLocation = 0;
+    private Tile spawnLocation;
+    [SerializeField]
+    private Map map;
 
     private Pawn[] pawns;
 
-    public int SpawnLocation { get{ return spawnLocation; }}
+    public Tile SpawnLocation { get{ return spawnLocation; }}
     public Team CurrentTeam { get{ return currentTeam; }}
     
     void Start(){
@@ -29,8 +31,10 @@ public class TeamController : MonoBehaviour
         for (int i = 0; i < pawnAmount; i++)
         {
             pawns[i] = Instantiate(pawnPrefab);
+            pawns[i].transform.SetParent(transform);
             pawns[i].Init(this);
-            pawns[i].SetToSpawn(spawnLocation);
+            pawns[i].Movement.Map = map;
+            pawns[i].SetToSpawn(spawnLocation.TileIndex);
         }
     }
 }

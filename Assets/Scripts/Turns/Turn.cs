@@ -11,11 +11,17 @@ public class Turn : MonoBehaviour
 
     public int MoveAmount { get; private set; }
 
+    private Dice dice = new Dice();
+
     public void StartTurn(){
+        MoveAmount = dice.Roll();
+
         //TODO implement turn logic
+        
     }
 
     public void StopTurn(){
+        MoveAmount = -1;
     }
     
 }
