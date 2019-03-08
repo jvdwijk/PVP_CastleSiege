@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class Pawn : MonoBehaviour
 {
-    
-    private Team pawnTeam = Team.Elf;
+    [SerializeField]
+    private PawnMovement movement;
+    private Team pawnTeam = 0;
+    private TeamController teamController;
 
-    public void Init(Team team){
-        pawnTeam = team;
+
+    public void Init(TeamController team){
+        teamController = team;
+        pawnTeam = teamController.CurrentTeam;
     }
 
     public void GetHit(){
-        SetToSpawn(0); //TODO work with teammanager
+        SetToSpawn(teamController.SpawnLocation);
     }
 
     public void SetToSpawn(int spawnPoint){
-        
+        movement.MovePawnTo(spawnPoint);
     }
 }
