@@ -12,7 +12,7 @@ public class Map : MonoBehaviour
     [SerializeField]
     private bool drawGizmoz;
 
-    public Action OnTileClicked;
+    public Action<Tile> OnTileClicked;
 
     private void Awake() {
         for (int i = 0; i < tiles.Length; i++)
