@@ -9,9 +9,12 @@ public class PawnMovement : MonoBehaviour
     
     public int Location => location; 
     
+    public Map Map {get; set;}
+    
     public Action<int> OnChangeLocation;
 
     public void MovePawn(int amount){
+        //TODO animation!
         SetLocation(location + amount);
     }
 
@@ -21,6 +24,7 @@ public class PawnMovement : MonoBehaviour
     }
 
     private void SetLocation(int tileLocation){
+        transform.position = Map.GetTile(tileLocation).Location;
         location = tileLocation;
         OnChangeLocation?.Invoke(location);
     }
