@@ -22,7 +22,7 @@ public class PawnMovement : MonoBehaviour
     }
 
     public void MovePawn(int amount){
-        StartCoroutine(MovePawnRoutine(amount)); //TODO make this work
+        StartCoroutine(MovePawnRoutine(amount));
     }
 
     public void MovePawnTo(int tileLocation){
@@ -36,7 +36,7 @@ public class PawnMovement : MonoBehaviour
     }
 
     private IEnumerator MovePawnRoutine(int moveAmount){
-        Vector3 velocity = Vector3.zero;
+        var velocity = Vector3.zero;
 
         for (int i = 0; i < moveAmount; i++){
             Vector3 locationGoal = Map.GetTile(location + i).Location;
