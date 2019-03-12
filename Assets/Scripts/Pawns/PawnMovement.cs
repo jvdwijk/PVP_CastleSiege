@@ -14,11 +14,11 @@ public class PawnMovement : MonoBehaviour
     
     public Tile[] Path {get; set;}
     
-    public Action<int> OnChangeLocation;
+    public Action<int, int> OnChangeLocation;
 
     [ContextMenu("MoveThatPawn")]
     public void MoveThatPawn(){ //TODO for testing, remove when there is an input system
-        MovePawn(25);
+        MovePawn(5);
     }
 
     public void MovePawn(int amount){
@@ -31,14 +31,17 @@ public class PawnMovement : MonoBehaviour
     }
 
     private void SetLocation(int tileLocation){
+        
+        var oldLocation = location;
         location = tileLocation;
-        OnChangeLocation?.Invoke(location);
+        
+        OnChangeLocation?.Invoke(location, oldLocation);
     }
 
     private IEnumerator MovePawnRoutine(int moveAmount){
         var velocity = Vector3.zero;
         var moved = 0;
-        for (int i = 0; i < moveAmount; i++){
+        for (int i = 1; i < moveAmount+1; i++){
             if (location + i >= Path.Length)
                 break;
 

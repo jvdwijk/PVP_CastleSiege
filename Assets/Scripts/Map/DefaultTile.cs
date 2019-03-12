@@ -14,8 +14,15 @@ public class DefaultTile : Tile
 
     public override void PawnEnter(Pawn pawn)
     {
+        if (this.pawn != null)
+            this.pawn.GetHit();
+
         this.pawn = pawn;
         OnNewPawn?.Invoke(pawn);
+    }
+
+    public override void PawnLeave(Pawn pawn){
+        this.pawn = null;
     }
 
 }
