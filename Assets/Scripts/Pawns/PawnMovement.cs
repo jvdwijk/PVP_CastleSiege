@@ -24,7 +24,7 @@ public class PawnMovement : MonoBehaviour
     }
 
     private void SetLocation(int tileLocation){
-        transform.position = Map.GetTile(tileLocation).Location;
+//        transform.position = Map.GetTile(tileLocation).Location;
         location = tileLocation;
         OnChangeLocation?.Invoke(location);
     }

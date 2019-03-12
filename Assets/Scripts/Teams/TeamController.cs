@@ -34,7 +34,7 @@ public class TeamController : MonoBehaviour
             pawns[i].transform.SetParent(transform);
             pawns[i].Init(this);
             pawns[i].Movement.Map = map;
-            pawns[i].SetToSpawn(spawnLocation.TileIndex);
+//            pawns[i].SetToSpawn(spawnLocation.TileIndex);
         }
     }
 }
