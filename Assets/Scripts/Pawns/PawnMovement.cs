@@ -12,13 +12,13 @@ public class PawnMovement : MonoBehaviour
     
     public int Location => location; 
     
-    public Map Map {get; set;}
+    public Tile[] Path {get; set;}
     
     public Action<int> OnChangeLocation;
 
     [ContextMenu("MoveThatPawn")]
     public void MoveThatPawn(){ //TODO for testing, remove when there is an input system
-        MovePawn(3);
+        MovePawn(25);
     }
 
     public void MovePawn(int amount){
@@ -26,7 +26,7 @@ public class PawnMovement : MonoBehaviour
     }
 
     public void MovePawnTo(int tileLocation){
-        transform.position = Map.GetTile(tileLocation).Location;;
+        transform.position = Path[tileLocation].Location;;
         SetLocation(tileLocation);
     }
 
@@ -37,16 +37,20 @@ public class PawnMovement : MonoBehaviour
 
     private IEnumerator MovePawnRoutine(int moveAmount){
         var velocity = Vector3.zero;
-
+        var moved = 0;
         for (int i = 0; i < moveAmount; i++){
-            Vector3 locationGoal = Map.GetTile(location + i).Location;
+            if (location + i >= Path.Length)
+                break;
+
+            Vector3 locationGoal = Path[location + i].Location;
                 
             while ((transform.position - locationGoal).magnitude > 0.01f){     
                 transform.position = Vector3.SmoothDamp(transform.position, locationGoal, ref velocity, pawnSpeed);
                 yield return null;
             }
             transform.position = locationGoal;
+            moved++;
         }
-        SetLocation(location + moveAmount);
+        SetLocation(location + moved);
     }
 }

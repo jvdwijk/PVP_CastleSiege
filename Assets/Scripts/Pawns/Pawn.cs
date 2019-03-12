@@ -17,10 +17,10 @@ public class Pawn : MonoBehaviour
     }
 
     public void GetHit(){
-//        SetToSpawn(teamController.SpawnLocation.TileIndex);
+        SetToSpawn();
     }
 
-    public void SetToSpawn(int spawnPoint){
-        movement.MovePawnTo(spawnPoint);
+    public void SetToSpawn(){
+        movement.MovePawnTo(0);
     }
 }
