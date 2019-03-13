@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class EnabledSwitch : MonoBehaviour
 {
-public GameObject[] menuObjects;
+[SerializeField] private GameObject[] _menuObjects;
 
       public void Switch(int menuNumber)
     {
-        menuObjects[menuNumber].SetActive(!menuObjects[menuNumber].activeSelf);
+        _menuObjects[menuNumber].SetActive(!_menuObjects[menuNumber].activeSelf);
     }
 
     public void DisableAll()
     {
-        foreach(GameObject menuObject in menuObjects)
+        foreach(GameObject menuObject in _menuObjects)
         {
             menuObject.SetActive(false);
         }

@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class SwitchScenes : MonoBehaviour
 {
-    public void SceneLoad(int Scenenumber)
+    public void SceneLoad(int scenenumber)
     {
-        SceneManager.LoadSceneAsync(Scenenumber);
+        SceneManager.LoadSceneAsync(scenenumber);
     }
 
     public void QuitGame()
