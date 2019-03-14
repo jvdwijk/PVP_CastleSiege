@@ -38,6 +38,9 @@ public class Turn : MonoBehaviour
         Pawn currentPawn = selectedTile?.Pawn;
         if(currentPawn == null)
             return;
+        
+        if(currentPawn.PawnTeam != team)
+            return;
 
         currentPawn.Movement.MovePawn(MoveAmount);
         turnManager.NextTurn();
