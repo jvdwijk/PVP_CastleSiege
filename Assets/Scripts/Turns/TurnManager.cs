@@ -54,7 +54,7 @@ public class TurnManager : MonoBehaviour
         CurrentTurn = turns[team];
 
         CurrentTurn?.StartTurn();
-
+        print("gi");
         OnTurnChanged?.Invoke(CurrentTurn);
     }
 
