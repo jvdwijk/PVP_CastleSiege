@@ -1,12 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-
 using UnityEngine;
 
 public class Dice
 {
-    private Random random;
-
     public int Sides { get; private set; }
 
     public Dice(int sides = 6)

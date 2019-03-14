@@ -12,11 +12,11 @@ public class SliderText : MonoBehaviour
     private Slider slider;
 
     private void Awake() {
-        SetSetxt(slider.value);
-        slider.onValueChanged.AddListener(SetSetxt);
+        SetText(slider.value);
+        slider.onValueChanged.AddListener(SetText);
     }
 
-    public void SetSetxt(float num){
+    public void SetText(float num){
         text.text = num.ToString();
     }
 
