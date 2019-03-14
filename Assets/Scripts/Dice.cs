@@ -1,6 +1,7 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+
+using UnityEngine;
 
 public class Dice
 {
@@ -13,12 +14,11 @@ public class Dice
         if(sides < 0)
             sides = 6;
 
-        random = new Random();
         Sides = sides;
     }
 
     public int Roll() {
-        return random.Next(1, Sides + 1);
+        return Random.Range(1, Sides+1);;
     }
 
     public int[] Roll(int amount){
