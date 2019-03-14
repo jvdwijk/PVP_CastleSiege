@@ -16,11 +16,6 @@ public class PawnMovement : MonoBehaviour
     
     public Action<int, int> OnChangeLocation;
 
-    [ContextMenu("MoveThatPawn")]
-    public void MoveThatPawn(){ //TODO for testing, remove when there is an input system
-        MovePawn(5);
-    }
-
     public void MovePawn(int amount){
         StartCoroutine(MovePawnRoutine(amount));
     }

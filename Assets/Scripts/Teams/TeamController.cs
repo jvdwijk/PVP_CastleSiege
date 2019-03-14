@@ -12,13 +12,11 @@ public class TeamController : MonoBehaviour
     private Tile spawnLocation;
     [SerializeField]
     private Tile finalTile;
-
     [SerializeField]
     private Map map;
-
     private Pawn[] pawns;
     private Tile[] path;
-
+    
     public Tile SpawnLocation { get{ return spawnLocation; }}
     public Team CurrentTeam { get{ return currentTeam; }}
     
@@ -39,6 +37,13 @@ public class TeamController : MonoBehaviour
             pawns[i].transform.SetParent(transform);
             pawns[i].Init(this);
             pawns[i].Movement.Path = path;
+            pawns[i].SetToSpawn();
+        }
+    }
+
+    public void SendAllBack(){
+        for (int i = 0; i < pawns.Length; i++)
+        {
             pawns[i].SetToSpawn();
         }
     }
