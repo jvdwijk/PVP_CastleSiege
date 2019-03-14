@@ -18,7 +18,6 @@ public class TurnManager : MonoBehaviour
             return;
 
         turns.Add(team, turn);
-        print("Added: " + turn.Team);
     }
 
     public void RemoveTeam(Team team){
@@ -45,7 +44,6 @@ public class TurnManager : MonoBehaviour
         CurrentTurn = turns[team];
 
         CurrentTurn?.StartTurn();
-        print("gi");
         OnTurnChanged?.Invoke(CurrentTurn);
     }
 
@@ -54,7 +52,6 @@ public class TurnManager : MonoBehaviour
         Team nextTurn;
         if (GetNextAvailibleTeam(out nextTurn)) {
             SetTurn(nextTurn);
-            print("current team: " + nextTurn);
             return;
         }
 
