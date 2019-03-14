@@ -5,53 +5,45 @@ using UnityEngine;
 
 public class Map : MonoBehaviour
 {
-    
-    [SerializeField]
-    private Tile[] tiles;
-
-    [SerializeField]
-    private bool drawGizmoz;
+    private List<Tile> testedTiles = new List<Tile>();
 
     public Action<Tile> OnTileClicked;
 
-    private void Awake() {
-        for (int i = 0; i < tiles.Length; i++)
+    public Tile[] GetPath(Tile from, Tile to){
+        testedTiles.Clear();
+        var path = CalculatePath(from, to);
+        if(path != null)
+            path.Reverse();
+        return path.ToArray();
+    }
+
+    private List<Tile> CalculatePath(Tile from, Tile to){
+
+        List<Tile> path = null;
+        foreach (var tile in from.ConnectedTiles)
         {
-            tiles[i].SetIndex(i);
+            if (testedTiles.Contains(tile))
+                continue;
+
+            testedTiles.Add(tile);
+            if (tile == to)
+            {
+                path = new List<Tile>();
+                path.Add(to);
+                break;
+            }
+            
+            
+            var newPath = CalculatePath(tile, to);
+            if (path == null || newPath != null && newPath.Count < path.Count)
+                path = newPath;
+
         }
-    }
 
-    private void OnDrawGizmos() {
-        if (!drawGizmoz)
-            return;
-        for (int i = 1; i < tiles.Length; i++)
-        {
-            var tile = GetTile(i);
+        if (path != null)
+            path.Add(from);
 
-            if (!tile)
-                return;
-            Gizmos.color = Color.blue;
-            Gizmos.DrawSphere(tile.Location, 0.5f);
-
-            var nextTile = GetTile(i+1);
-            if (!nextTile)
-                return;
-
-            Gizmos.color = Color.red;
-            Gizmos.DrawLine(tile.Location, nextTile.Location);
-        }
-    }
-
-    [ContextMenu("Update Map")]
-    private void UpdateMap(){
-        tiles = GetComponentsInChildren<Tile>();
-    }
-
-    public Tile GetTile(int index){
-        if (index >= tiles.Length)
-            return null;
-
-        return tiles[index];
+        return path;
     }
 
 }

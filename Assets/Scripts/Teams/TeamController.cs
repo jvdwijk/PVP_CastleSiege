@@ -11,9 +11,13 @@ public class TeamController : MonoBehaviour
     [SerializeField]
     private Tile spawnLocation;
     [SerializeField]
+    private Tile finalTile;
+
+    [SerializeField]
     private Map map;
 
     private Pawn[] pawns;
+    private Tile[] path;
 
     public Tile SpawnLocation { get{ return spawnLocation; }}
     public Team CurrentTeam { get{ return currentTeam; }}
@@ -22,6 +26,7 @@ public class TeamController : MonoBehaviour
         Init(3);
     }
     public void Init(int pawnAmount = 4){
+        path = map.GetPath(spawnLocation, finalTile);
         SpawnPawns(pawnAmount);
     }
 
@@ -33,8 +38,8 @@ public class TeamController : MonoBehaviour
             pawns[i] = Instantiate(pawnPrefab);
             pawns[i].transform.SetParent(transform);
             pawns[i].Init(this);
-            pawns[i].Movement.Map = map;
-            pawns[i].SetToSpawn(spawnLocation.TileIndex);
+            pawns[i].Movement.Path = path;
+            pawns[i].SetToSpawn();
         }
     }
 }
