@@ -22,9 +22,6 @@ public class TeamController : MonoBehaviour
     public Tile SpawnLocation { get{ return spawnLocation; }}
     public Team CurrentTeam { get{ return currentTeam; }}
     
-    void Start(){
-        Init(3);
-    }
     public void Init(int pawnAmount = 4){
         path = map.GetPath(spawnLocation, finalTile);
         SpawnPawns(pawnAmount);
