@@ -7,6 +7,15 @@ public class Turn : MonoBehaviour
     [SerializeField]
     private Team team;
 
+    [SerializeField]
+    private TurnManager turnManager;
+
+    [SerializeField]
+    private TeamController teamController;
+
+    [SerializeField]
+    private TileInput input;
+
     public Team Team => team;
 
     public int MoveAmount { get; private set; }
@@ -15,13 +24,25 @@ public class Turn : MonoBehaviour
 
     public void StartTurn(){
         MoveAmount = dice.Roll();
-
+        input.OnTileClicked += SelectTile;
         //TODO implement turn logic
         
     }
 
     public void StopTurn(){
         MoveAmount = -1;
+        input.OnTileClicked -= SelectTile;
     }
     
+    private void SelectTile(Tile selectedTile){
+        Pawn currentPawn = selectedTile?.Pawn;
+        if(currentPawn == null)
+            return;
+        
+        if(currentPawn.PawnTeam != team)
+            return;
+
+        currentPawn.Movement.MovePawn(MoveAmount);
+        turnManager.NextTurn();
+    }
 }

@@ -10,6 +10,7 @@ public class Pawn : MonoBehaviour
     private TeamController teamController;
 
     public PawnMovement Movement => movement;
+    public Team PawnTeam => pawnTeam;
 
     public void Init(TeamController team){
         teamController = team;
