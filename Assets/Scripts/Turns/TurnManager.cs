@@ -19,6 +19,7 @@ public class TurnManager : MonoBehaviour
             if (turn)
                 AddTeam(turn);
         }
+        NextTurn();
     }
 
     public void AddTeam(Turn turn){
