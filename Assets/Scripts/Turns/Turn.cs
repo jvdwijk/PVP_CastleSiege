@@ -16,6 +16,8 @@ public class Turn : MonoBehaviour
     [SerializeField]
     private TileInput input;
 
+    private bool skipTurn = false;
+
     public Team Team => team;
 
     public int MoveAmount { get; private set; }
@@ -23,10 +25,15 @@ public class Turn : MonoBehaviour
     private Dice dice = new Dice();
 
     public void StartTurn(){
+        if (skipTurn)
+        {
+            skipTurn = false;
+            turnManager.NextTurn();
+            return;
+        }
+
         MoveAmount = dice.Roll();
         input.OnTileClicked += SelectTile;
-        //TODO implement turn logic
-        
     }
 
     public void StopTurn(){
@@ -44,5 +51,9 @@ public class Turn : MonoBehaviour
 
         currentPawn.Movement.MovePawn(MoveAmount);
         turnManager.NextTurn();
+    }
+
+    public void StipNextTurn(){
+        skipTurn = true;
     }
 }
