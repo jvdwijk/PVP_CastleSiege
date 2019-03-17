@@ -16,8 +16,8 @@ public class PawnMovement : MonoBehaviour
     
     public Action<int, int> OnChangeLocation;
 
-    public void MovePawn(int amount){
-        StartCoroutine(MovePawnRoutine(amount));
+    public void MovePawn(int amount, Action destinationReached = null){
+        StartCoroutine(MovePawnRoutine(amount, destinationReached));
     }
 
     public void MovePawnTo(int tileLocation){
@@ -33,7 +33,7 @@ public class PawnMovement : MonoBehaviour
         OnChangeLocation?.Invoke(location, oldLocation);
     }
 
-    private IEnumerator MovePawnRoutine(int moveAmount){
+    private IEnumerator MovePawnRoutine(int moveAmount, Action destinationReached = null){
         var velocity = Vector3.zero;
         var moved = 0;
         for (int i = 1; i < moveAmount+1; i++){
@@ -50,5 +50,6 @@ public class PawnMovement : MonoBehaviour
             moved++;
         }
         SetLocation(location + moved);
+        destinationReached?.Invoke();
     }
 }
