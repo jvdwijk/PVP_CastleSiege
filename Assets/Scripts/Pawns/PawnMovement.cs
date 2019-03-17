@@ -13,11 +13,13 @@ public class PawnMovement : MonoBehaviour
     public int Location => location; 
     
     public Tile[] Path {get; set;}
+
+    public Tile CurrentTile => Path[location];
     
     public Action<int, int> OnChangeLocation;
 
-    public void MovePawn(int amount, Action destinationReached = null){
-        StartCoroutine(MovePawnRoutine(amount, destinationReached));
+    public Coroutine MovePawn(int amount, Action destinationReached = null){
+        return StartCoroutine(MovePawnRoutine(amount, destinationReached));
     }
 
     public void MovePawnTo(int tileLocation){
