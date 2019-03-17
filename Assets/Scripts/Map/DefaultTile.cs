@@ -18,7 +18,6 @@ public class DefaultTile : Tile
             this.pawn.GetHit();
 
         this.pawn = pawn;
-        StartCoroutine(RunEffects());
         OnNewPawn?.Invoke(pawn);
     }
 

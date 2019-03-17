@@ -68,7 +68,7 @@ public abstract class Tile : MonoBehaviour
         effects.Remove(effect);
     }
 
-    protected IEnumerator RunEffects(){
+    public IEnumerator RunEffects(){
         foreach (var effect in effects)
         {
             yield return EffectHandler.Instance.ExecuteEffect(effect, this);
