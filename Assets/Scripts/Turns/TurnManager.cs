@@ -5,22 +5,12 @@ using UnityEngine;
 
 public class TurnManager : MonoBehaviour
 {
-    [SerializeField]
-    private Turn[] startTurns;
 
     private Dictionary<Team, Turn> turns = new Dictionary<Team, Turn>();
     
     public Turn CurrentTurn { get; private set;}
 
     public event Action<Turn> OnTurnChanged;
-
-    private void Awake() {
-        foreach (var turn in startTurns){
-            if (turn)
-                AddTeam(turn);
-        }
-        NextTurn();
-    }
 
     public void AddTeam(Turn turn){
         var team = turn.Team;
