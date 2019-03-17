@@ -974,6 +974,26 @@ PrefabInstance:
       propertyPath: startTurns.Array.data[3]
       value: 
       objectReference: {fileID: 261627874}
+    - target: {fileID: 4048803638175035360, guid: 70cbf88e3f1574c4681f535d294c72e3,
+        type: 3}
+      propertyPath: input
+      value: 
+      objectReference: {fileID: 596323172}
+    - target: {fileID: 7988301030695089149, guid: 70cbf88e3f1574c4681f535d294c72e3,
+        type: 3}
+      propertyPath: input
+      value: 
+      objectReference: {fileID: 596323172}
+    - target: {fileID: 800550994673988522, guid: 70cbf88e3f1574c4681f535d294c72e3,
+        type: 3}
+      propertyPath: input
+      value: 
+      objectReference: {fileID: 596323172}
+    - target: {fileID: 915910308557782595, guid: 70cbf88e3f1574c4681f535d294c72e3,
+        type: 3}
+      propertyPath: input
+      value: 
+      objectReference: {fileID: 596323172}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70cbf88e3f1574c4681f535d294c72e3, type: 3}
 --- !u!1001 &828912046
