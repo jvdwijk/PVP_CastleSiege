@@ -13,6 +13,9 @@ public class GameStarter : MonoBehaviour
     [SerializeField]
     private TurnManager turnManager;
 
+    [SerializeField]
+    private GUIActivator startGUI;
+
     public int PlayerAmount {get; private set;} = 4;
     public int PawnAmount {get; private set;} = 4;
     public bool UseTimer {get; private set;} = false;
@@ -21,6 +24,8 @@ public class GameStarter : MonoBehaviour
         if (PlayerAmount > turns.Length || PlayerAmount > teamsControllers.Length)
             throw new System.Exception("Too many players :(");
 
+        startGUI.SetActive(true);
+        
         for (int i = 0; i < PlayerAmount; i++)
         {
             teamsControllers[i].Init(PawnAmount);
