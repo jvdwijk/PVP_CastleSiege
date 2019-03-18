@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-using UnityEditor.SceneManagement;
 
 public class TileConnector : MonoBehaviour
 {
@@ -31,12 +30,12 @@ public class TileConnector : MonoBehaviour
             tile.AddConnection(newTile);
             tile = newTile;
 
-            EditorUtility.SetDirty(newTile);
+     //       EditorUtility.SetDirty(newTile);
         }
         lastTile.AddConnection(firstTile);
-        EditorUtility.SetDirty(lastTile);
+  //      EditorUtility.SetDirty(lastTile);
 
-        EditorSceneManager.MarkSceneDirty(lastTile.gameObject.scene);
+//        EditorSceneManager.MarkSceneDirty(lastTile.gameObject.scene);
     }
 
     [ContextMenu("Reset Tiles")]  

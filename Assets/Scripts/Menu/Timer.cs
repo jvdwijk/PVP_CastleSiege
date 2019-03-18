@@ -13,7 +13,6 @@ public class Timer : MonoBehaviour
 
     private void Awake()
     {
-        //if(true) //TODO add a check for game settings 
         turnManager.OnTurnChanged += StartTimer;
     }
 
@@ -21,15 +20,15 @@ public class Timer : MonoBehaviour
     {
         CancelInvoke("Countdown");
         currentTimer = timerMax;
-        timerText.text = "0:" + currentTimer.ToString();
+        timerText.text = currentTimer.ToString();
         InvokeRepeating("Countdown", 1f, 1f);
     }
     private void Countdown()
     {
         if(currentTimer > 0)
         {
-        currentTimer--;
-        timerText.text = "0:" + currentTimer.ToString();
+            currentTimer--;
+            timerText.text = currentTimer.ToString();
         }
         else{
             turnManager.NextTurn();
