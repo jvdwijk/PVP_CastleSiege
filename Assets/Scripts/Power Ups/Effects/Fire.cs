@@ -17,8 +17,10 @@ public class Fire : TileEffect
 
     public override IEnumerator Execute(Tile trigger)
     {
+        uiHandler.SetPowerupImage(icon);
         yield return StartCoroutine(WaitForValidInput());
         newInput.Pawn.SetToSpawn();
+        uiHandler.ResetImage();
     }
 
     private IEnumerator WaitForValidInput(){
