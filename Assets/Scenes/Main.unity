@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -440,6 +440,12 @@ PrefabInstance:
       propertyPath: finalTile
       value: 
       objectReference: {fileID: 291382680}
+    - target: {fileID: 4827706624169262193, guid: 8b84a338c90b23c45970c13746114018,
+        type: 3}
+      propertyPath: pawnPrefab
+      value: 
+      objectReference: {fileID: 2628750156493087964, guid: 5fda6aca0042c85409c2895a02a2746e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b84a338c90b23c45970c13746114018, type: 3}
 --- !u!114 &282242747 stripped
@@ -480,10 +486,10 @@ Light:
   m_GameObject: {fileID: 283146235}
   m_Enabled: 1
   serializedVersion: 8
-  m_Type: 1
+  m_Type: 2
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
-  m_Range: 10
+  m_Intensity: 5
+  m_Range: 50
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -516,13 +522,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283146235}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: -592.46387, y: -416.93256, z: 17.513}
-  m_LocalScale: {x: 3.6734695, y: 3.6734698, z: 3.6734693}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -591.6, y: -329, z: 21.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5742412236572046748}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &291382680 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1074934958997816029, guid: 0cdfb6a5d7c522940bb4ada5d697e607,
@@ -2024,6 +2030,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 2.99
       objectReference: {fileID: 0}
+    - target: {fileID: 3158596286368245201, guid: 0cdfb6a5d7c522940bb4ada5d697e607,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 455bd8c7213826a478377496bc9107c8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cdfb6a5d7c522940bb4ada5d697e607, type: 3}
 --- !u!4 &975403113 stripped
@@ -2252,6 +2263,12 @@ PrefabInstance:
       propertyPath: finalTile
       value: 
       objectReference: {fileID: 1902100147}
+    - target: {fileID: 4827706624169262193, guid: 8b84a338c90b23c45970c13746114018,
+        type: 3}
+      propertyPath: pawnPrefab
+      value: 
+      objectReference: {fileID: 158952187905473449, guid: f88d6230f34525647a76d19dd2760652,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b84a338c90b23c45970c13746114018, type: 3}
 --- !u!114 &1446629414 stripped
@@ -2317,8 +2334,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 20
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2341,13 +2358,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490129416}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -3.8, y: 36.3, z: -2.8}
+  m_LocalRotation: {x: 0.5210515, y: -0, z: -0, w: 0.8535252}
+  m_LocalPosition: {x: -0.23, y: 28.98, z: -17.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 62.806004, y: 0, z: 0}
 --- !u!114 &1499092422 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7428654120712625206, guid: 0cdfb6a5d7c522940bb4ada5d697e607,
@@ -2555,6 +2572,12 @@ PrefabInstance:
       propertyPath: finalTile
       value: 
       objectReference: {fileID: 565782588}
+    - target: {fileID: 4827706624169262193, guid: 8b84a338c90b23c45970c13746114018,
+        type: 3}
+      propertyPath: pawnPrefab
+      value: 
+      objectReference: {fileID: 5529071861687904713, guid: 3b21a46da90be47488ccfc472598be4a,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b84a338c90b23c45970c13746114018, type: 3}
 --- !u!114 &1669773198 stripped
@@ -2686,6 +2709,12 @@ PrefabInstance:
       propertyPath: finalTile
       value: 
       objectReference: {fileID: 1714253626}
+    - target: {fileID: 4827706624169262193, guid: 8b84a338c90b23c45970c13746114018,
+        type: 3}
+      propertyPath: pawnPrefab
+      value: 
+      objectReference: {fileID: 5859472419941901355, guid: 165770ff01c924a4fb1033acc2c08d37,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b84a338c90b23c45970c13746114018, type: 3}
 --- !u!114 &1848533519 stripped
