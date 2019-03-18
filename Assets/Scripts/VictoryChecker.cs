@@ -2,16 +2,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
+[System.Serializable]
+public class GamewonEvent : UnityEvent<Team>{}
 
 public class VictoryChecker : MonoBehaviour
 {
 
-    private int pawnAmount = 4;
+    [SerializeField]
+    private GameStarter gameRules;
 
     [SerializeField]
     private MultiPawnTile[] finalTiles;
-
-    public Action<Team> GameWon;
+    
+    public GamewonEvent OnGameWon;
 
     private void Awake() {
         foreach (var tile in finalTiles)
@@ -21,10 +26,10 @@ public class VictoryChecker : MonoBehaviour
     }
 
     private void NewPawnEnterFinalTile(MultiPawnTile tile){
-        if (tile.PawnAmount != pawnAmount)
+        if (tile.PawnAmount < gameRules.PawnAmount)
             return;
 
-        GameWon?.Invoke(tile.Pawn.PawnTeam);
+        OnGameWon?.Invoke(tile.Pawn.PawnTeam);
     }
 
 }
