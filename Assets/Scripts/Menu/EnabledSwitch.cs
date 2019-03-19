@@ -11,10 +11,11 @@ public class EnabledSwitch : MonoBehaviour
         _menuObjects[menuNumber].SetActive(!_menuObjects[menuNumber].activeSelf);
     }
 
-    public void DisableAll()
+    public void BeginGame()
     {
         foreach(GameObject menuObject in _menuObjects)
         {
+
             menuObject.SetActive(false);
         }
     }
