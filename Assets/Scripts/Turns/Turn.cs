@@ -16,33 +16,51 @@ public class Turn : MonoBehaviour
     [SerializeField]
     private TileInput input;
 
+    [SerializeField]
+    private List<TurnPhase> phases;
+
+    private bool skipTurn = false;
+    private Dice dice = new Dice();
+
     public Team Team => team;
 
     public int MoveAmount { get; private set; }
 
-    private Dice dice = new Dice();
+    public Tile MovedPawnDestination { get; set; }
+    
+    private void Awake() {
+        foreach (var phase in phases)
+        {
+            phase.SetTurn(this);
+        }
+    }
 
     public void StartTurn(){
+        if (skipTurn)
+        {
+            skipTurn = false;
+            turnManager.NextTurn();
+            return;
+        }
+
         MoveAmount = dice.Roll();
-        input.OnTileClicked += SelectTile;
-        //TODO implement turn logic
-        
+        StartCoroutine(PlayTurn());
+    }
+
+    public IEnumerator PlayTurn(){
+
+        foreach (var phase in phases)
+        {
+            yield return StartCoroutine(phase.PlayPhase());
+        }
+        turnManager.NextTurn();
     }
 
     public void StopTurn(){
         MoveAmount = -1;
-        input.OnTileClicked -= SelectTile;
     }
-    
-    private void SelectTile(Tile selectedTile){
-        Pawn currentPawn = selectedTile?.Pawn;
-        if(currentPawn == null)
-            return;
-        
-        if(currentPawn.PawnTeam != team)
-            return;
 
-        currentPawn.Movement.MovePawn(MoveAmount);
-        turnManager.NextTurn();
+    public void StipNextTurn(){
+        skipTurn = true;
     }
 }
