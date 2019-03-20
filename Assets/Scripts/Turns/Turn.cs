@@ -57,8 +57,10 @@ public class Turn : MonoBehaviour
 
     public void StopTurn(){
         MoveAmount = -1;
-        Phase.ExitPhase();
-        StopCoroutine(phaseRoutine);
+        if(Phase){
+            Phase.ExitPhase();
+            StopCoroutine(phaseRoutine);
+        }
     }
 
     public void StipNextTurn(){

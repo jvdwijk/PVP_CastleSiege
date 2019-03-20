@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -550,7 +550,7 @@ PrefabInstance:
         type: 3}
       propertyPath: teamController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 447374675}
     - target: {fileID: 3330277011972148737, guid: 70cbf88e3f1574c4681f535d294c72e3,
         type: 3}
       propertyPath: input
@@ -565,7 +565,7 @@ PrefabInstance:
         type: 3}
       propertyPath: teamController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 88684309}
     - target: {fileID: 1923687589100969890, guid: 70cbf88e3f1574c4681f535d294c72e3,
         type: 3}
       propertyPath: input
@@ -660,7 +660,7 @@ PrefabInstance:
         type: 3}
       propertyPath: teamController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2063126501}
     - target: {fileID: 5502932174715487167, guid: 70cbf88e3f1574c4681f535d294c72e3,
         type: 3}
       propertyPath: input
@@ -680,7 +680,7 @@ PrefabInstance:
         type: 3}
       propertyPath: teamController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1472371019}
     - target: {fileID: 2998924827238810600, guid: 70cbf88e3f1574c4681f535d294c72e3,
         type: 3}
       propertyPath: input
@@ -736,6 +736,21 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 596323172}
+    - target: {fileID: 7347227957765337516, guid: 70cbf88e3f1574c4681f535d294c72e3,
+        type: 3}
+      propertyPath: diceButton
+      value: 
+      objectReference: {fileID: 772580179}
+    - target: {fileID: 7347227957765337516, guid: 70cbf88e3f1574c4681f535d294c72e3,
+        type: 3}
+      propertyPath: diceImage
+      value: 
+      objectReference: {fileID: 772580180}
+    - target: {fileID: 7347227957765337516, guid: 70cbf88e3f1574c4681f535d294c72e3,
+        type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 954422492}
     - target: {fileID: 1544096393200596518, guid: 70cbf88e3f1574c4681f535d294c72e3,
         type: 3}
       propertyPath: turnUIAnimation
@@ -751,6 +766,21 @@ PrefabInstance:
       propertyPath: turnText
       value: 
       objectReference: {fileID: 1390271298}
+    - target: {fileID: 7088471850878991429, guid: 70cbf88e3f1574c4681f535d294c72e3,
+        type: 3}
+      propertyPath: diceButton
+      value: 
+      objectReference: {fileID: 772580179}
+    - target: {fileID: 7088471850878991429, guid: 70cbf88e3f1574c4681f535d294c72e3,
+        type: 3}
+      propertyPath: diceImage
+      value: 
+      objectReference: {fileID: 772580180}
+    - target: {fileID: 7088471850878991429, guid: 70cbf88e3f1574c4681f535d294c72e3,
+        type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 954422492}
     - target: {fileID: 4864348836788841019, guid: 70cbf88e3f1574c4681f535d294c72e3,
         type: 3}
       propertyPath: turnUIAnimation
@@ -762,6 +792,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7116277709916350579}
     - target: {fileID: 4864348836788841019, guid: 70cbf88e3f1574c4681f535d294c72e3,
+        type: 3}
+      propertyPath: turnText
+      value: 
+      objectReference: {fileID: 1390271298}
+    - target: {fileID: 6258461349323501030, guid: 70cbf88e3f1574c4681f535d294c72e3,
+        type: 3}
+      propertyPath: diceButton
+      value: 
+      objectReference: {fileID: 772580179}
+    - target: {fileID: 6258461349323501030, guid: 70cbf88e3f1574c4681f535d294c72e3,
+        type: 3}
+      propertyPath: diceImage
+      value: 
+      objectReference: {fileID: 772580180}
+    - target: {fileID: 6258461349323501030, guid: 70cbf88e3f1574c4681f535d294c72e3,
+        type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 954422492}
+    - target: {fileID: 8119355610702132849, guid: 70cbf88e3f1574c4681f535d294c72e3,
+        type: 3}
+      propertyPath: turnUIAnimation
+      value: 
+      objectReference: {fileID: 7400000, guid: 7626579227fba0a418062349dc5f7d9d, type: 2}
+    - target: {fileID: 8119355610702132849, guid: 70cbf88e3f1574c4681f535d294c72e3,
+        type: 3}
+      propertyPath: startTurnAnimator
+      value: 
+      objectReference: {fileID: 7116277709916350579}
+    - target: {fileID: 8119355610702132849, guid: 70cbf88e3f1574c4681f535d294c72e3,
         type: 3}
       propertyPath: turnText
       value: 
@@ -781,66 +841,6 @@ PrefabInstance:
       propertyPath: turnText
       value: 
       objectReference: {fileID: 1390271298}
-    - target: {fileID: 8119355610702132849, guid: 70cbf88e3f1574c4681f535d294c72e3,
-        type: 3}
-      propertyPath: turnUIAnimation
-      value: 
-      objectReference: {fileID: 7400000, guid: 7626579227fba0a418062349dc5f7d9d, type: 2}
-    - target: {fileID: 8119355610702132849, guid: 70cbf88e3f1574c4681f535d294c72e3,
-        type: 3}
-      propertyPath: startTurnAnimator
-      value: 
-      objectReference: {fileID: 7116277709916350579}
-    - target: {fileID: 8119355610702132849, guid: 70cbf88e3f1574c4681f535d294c72e3,
-        type: 3}
-      propertyPath: turnText
-      value: 
-      objectReference: {fileID: 1390271298}
-    - target: {fileID: 7347227957765337516, guid: 70cbf88e3f1574c4681f535d294c72e3,
-        type: 3}
-      propertyPath: diceButton
-      value: 
-      objectReference: {fileID: 772580179}
-    - target: {fileID: 7347227957765337516, guid: 70cbf88e3f1574c4681f535d294c72e3,
-        type: 3}
-      propertyPath: diceImage
-      value: 
-      objectReference: {fileID: 772580180}
-    - target: {fileID: 7347227957765337516, guid: 70cbf88e3f1574c4681f535d294c72e3,
-        type: 3}
-      propertyPath: timer
-      value: 
-      objectReference: {fileID: 954422492}
-    - target: {fileID: 7088471850878991429, guid: 70cbf88e3f1574c4681f535d294c72e3,
-        type: 3}
-      propertyPath: diceButton
-      value: 
-      objectReference: {fileID: 772580179}
-    - target: {fileID: 7088471850878991429, guid: 70cbf88e3f1574c4681f535d294c72e3,
-        type: 3}
-      propertyPath: diceImage
-      value: 
-      objectReference: {fileID: 772580180}
-    - target: {fileID: 7088471850878991429, guid: 70cbf88e3f1574c4681f535d294c72e3,
-        type: 3}
-      propertyPath: timer
-      value: 
-      objectReference: {fileID: 954422492}
-    - target: {fileID: 6258461349323501030, guid: 70cbf88e3f1574c4681f535d294c72e3,
-        type: 3}
-      propertyPath: diceButton
-      value: 
-      objectReference: {fileID: 772580179}
-    - target: {fileID: 6258461349323501030, guid: 70cbf88e3f1574c4681f535d294c72e3,
-        type: 3}
-      propertyPath: diceImage
-      value: 
-      objectReference: {fileID: 772580180}
-    - target: {fileID: 6258461349323501030, guid: 70cbf88e3f1574c4681f535d294c72e3,
-        type: 3}
-      propertyPath: timer
-      value: 
-      objectReference: {fileID: 954422492}
     - target: {fileID: 15372768291631611, guid: 70cbf88e3f1574c4681f535d294c72e3,
         type: 3}
       propertyPath: diceButton
@@ -1863,6 +1863,51 @@ PrefabInstance:
     - target: {fileID: 1369751676042177107, guid: 0cdfb6a5d7c522940bb4ada5d697e607,
         type: 3}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684030004684133582, guid: 0cdfb6a5d7c522940bb4ada5d697e607,
+        type: 3}
+      propertyPath: effects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684030004684133582, guid: 0cdfb6a5d7c522940bb4ada5d697e607,
+        type: 3}
+      propertyPath: effects.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684030004706028418, guid: 0cdfb6a5d7c522940bb4ada5d697e607,
+        type: 3}
+      propertyPath: effects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684030004706028418, guid: 0cdfb6a5d7c522940bb4ada5d697e607,
+        type: 3}
+      propertyPath: effects.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684030005363116453, guid: 0cdfb6a5d7c522940bb4ada5d697e607,
+        type: 3}
+      propertyPath: effects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684030005363116453, guid: 0cdfb6a5d7c522940bb4ada5d697e607,
+        type: 3}
+      propertyPath: effects.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684030005907376892, guid: 0cdfb6a5d7c522940bb4ada5d697e607,
+        type: 3}
+      propertyPath: effects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684030005907376892, guid: 0cdfb6a5d7c522940bb4ada5d697e607,
+        type: 3}
+      propertyPath: effects.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684030006401300439, guid: 0cdfb6a5d7c522940bb4ada5d697e607,
+        type: 3}
+      propertyPath: effects.Array.size
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
