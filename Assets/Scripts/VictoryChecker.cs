@@ -21,7 +21,7 @@ public class VictoryChecker : MonoBehaviour
     private void Awake() {
         foreach (var tile in finalTiles)
         {
-            tile.OnNewPawnEnter += (pawn) => NewPawnEnterFinalTile(tile);
+            tile.OnNewPawn += (pawn) => NewPawnEnterFinalTile(tile);
         }
     }
 

@@ -8,4 +8,8 @@ public class EffectPhase : TurnPhase
     {
         yield return StartCoroutine(turn.MovedPawnDestination.RunEffects());
     }
+
+    public override void ExitPhase(){
+        
+    }
 }
