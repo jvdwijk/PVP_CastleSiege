@@ -19,9 +19,11 @@ public class Ice : TileEffect
 
     public override IEnumerator Execute(Tile trigger)
     {
+        uiHandler.SetPowerupImage(icon);
         yield return StartCoroutine(WaitForValidInput());
         var turn = turnManager.GetTurn(newInput.Pawn.PawnTeam);
         turn.StipNextTurn();
+        uiHandler.ResetImage();
     }
 
     private IEnumerator WaitForValidInput(){
