@@ -20,11 +20,14 @@ public class TeamController : MonoBehaviour
     private Tile[] path;
     
     public Tile SpawnLocation { get{ return spawnLocation; }}
+    public Tile FinalTile { get{ return finalTile; }}
     public Team CurrentTeam { get{ return currentTeam; }}
+    public Pawn[] Pawns{get { return pawns; }}
     
     public void Init(int pawnAmount = 4){
         path = map.GetPath(spawnLocation, finalTile);
         SpawnPawns(pawnAmount);
+        teamPawnUI.Init(this);
     }
 
     public void SpawnPawns(int pawnAmount){

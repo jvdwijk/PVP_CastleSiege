@@ -1417,6 +1417,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7416122279590723560}
+  - component: {fileID: 419918414602529432}
   m_Layer: 5
   m_Name: Team (3)
   m_TagString: Untagged
@@ -1445,6 +1446,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &419918414602529432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2941683649548086120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef78c4c86e7a5c4ea44923f5567bf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teamController: {fileID: 0}
+  pawns: []
 --- !u!1 &2941683650095275788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1454,6 +1469,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7416122280108805004}
+  - component: {fileID: 38528186761886483}
   m_Layer: 5
   m_Name: Team (1)
   m_TagString: Untagged
@@ -1482,6 +1498,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &38528186761886483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2941683650095275788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef78c4c86e7a5c4ea44923f5567bf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teamController: {fileID: 0}
+  pawns: []
 --- !u!1 &2941683650203858742
 GameObject:
   m_ObjectHideFlags: 0
@@ -1491,6 +1521,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7416122280478483382}
+  - component: {fileID: 3498890225417306479}
   m_Layer: 5
   m_Name: Team (2)
   m_TagString: Untagged
@@ -1519,6 +1550,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3498890225417306479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2941683650203858742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef78c4c86e7a5c4ea44923f5567bf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teamController: {fileID: 0}
+  pawns: []
 --- !u!1 &2941683650370102307
 GameObject:
   m_ObjectHideFlags: 0
@@ -1528,6 +1573,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7416122280379183267}
+  - component: {fileID: 3675164223478675537}
   m_Layer: 5
   m_Name: Team
   m_TagString: Untagged
@@ -1556,6 +1602,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3675164223478675537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2941683650370102307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef78c4c86e7a5c4ea44923f5567bf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teamController: {fileID: 0}
+  pawns: []
 --- !u!1 &5106219563164409153
 GameObject:
   m_ObjectHideFlags: 0
