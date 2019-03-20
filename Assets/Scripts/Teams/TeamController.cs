@@ -14,6 +14,8 @@ public class TeamController : MonoBehaviour
     private Tile finalTile;
     [SerializeField]
     private Map map;
+    [SerializeField]
+    private TeamControllerUI teamPawnUI;
     private Pawn[] pawns;
     private Tile[] path;
     
