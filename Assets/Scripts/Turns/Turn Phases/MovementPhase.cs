@@ -33,5 +33,9 @@ public class MovementPhase : TurnPhase
         selectedPawn = currentPawn;
     }
 
+    public override void ExitPhase(){
+        input.OnTileClicked -= TileClicked;
+    }
+
 
 }

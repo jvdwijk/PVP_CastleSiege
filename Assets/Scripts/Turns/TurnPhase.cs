@@ -11,5 +11,5 @@ public abstract class TurnPhase : MonoBehaviour
     }
 
     public abstract IEnumerator PlayPhase();
-
+    public abstract void ExitPhase();
 }

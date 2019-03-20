@@ -1,5 +1,57 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &926104247683795546
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6070812114716302108}
+  - component: {fileID: 7498458247906726199}
+  m_Layer: 0
+  m_Name: Dice Roll Phase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6070812114716302108
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926104247683795546}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8534663829971677586}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7498458247906726199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926104247683795546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64bdc20c1dc1f0a4c94f45e1480d6c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diceSideChangeAmount: 7
+  timePerDiceSide: 0.1
+  diceSides:
+  - {fileID: 21300000, guid: 8714e7aafe2e9bb48a9c52fc0af59924, type: 3}
+  - {fileID: 21300000, guid: b27bbde2baa15b141a64efa1ae59b2a4, type: 3}
+  - {fileID: 21300000, guid: 2c5bfd92d38d2d149b66d94b2e5d67c2, type: 3}
+  - {fileID: 21300000, guid: 9b11283a5ddb05c48a412b795f2288ad, type: 3}
+  - {fileID: 21300000, guid: 31572bd1cb9da1b4b9bd3b822fe5f726, type: 3}
+  - {fileID: 21300000, guid: 2d9dc4c3386c90d439302e203cd44fd2, type: 3}
 --- !u!1 &6376419797643898712
 GameObject:
   m_ObjectHideFlags: 0
@@ -29,7 +81,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8534663829971677586}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6237186637865646927
 MonoBehaviour:
@@ -71,6 +123,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 7971170322759686837}
+  - {fileID: 6070812114716302108}
   - {fileID: 2916096775223516137}
   - {fileID: 6033247541819990483}
   m_Father: {fileID: 0}
@@ -93,8 +147,57 @@ MonoBehaviour:
   teamController: {fileID: 0}
   input: {fileID: 0}
   phases:
+  - {fileID: 9031060868351547114}
+  - {fileID: 7498458247906726199}
   - {fileID: 496900131214267185}
   - {fileID: 6237186637865646927}
+--- !u!1 &7646301139966658680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7971170322759686837}
+  - component: {fileID: 9031060868351547114}
+  m_Layer: 0
+  m_Name: Start Phase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7971170322759686837
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7646301139966658680}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8534663829971677586}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9031060868351547114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7646301139966658680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71793f464d0cddc4a885bd1c28e16012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTurnAnimator: {fileID: 0}
+  turnUIAnimation: {fileID: 0}
+  turnText: {fileID: 0}
+  screenTime: 3
 --- !u!1 &8507624254432585708
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +227,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8534663829971677586}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &496900131214267185
 MonoBehaviour:
