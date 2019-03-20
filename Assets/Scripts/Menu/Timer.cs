@@ -13,16 +13,21 @@ public class Timer : MonoBehaviour
 
     private void Awake()
     {
-        turnManager.OnTurnChanged += StartTimer;
+        turnManager.OnTurnChanged += (turn) => StopTimer();
     }
 
-    public void StartTimer(Turn turn)
+    public void StartTimer()
     {
+        StopTimer();
+        InvokeRepeating("Countdown", 1f, 1f);
+    }
+
+    public void StopTimer(){
         CancelInvoke("Countdown");
         currentTimer = timerMax;
         timerText.text = currentTimer.ToString();
-        InvokeRepeating("Countdown", 1f, 1f);
     }
+
     private void Countdown()
     {
         if(currentTimer > 0)
