@@ -16,6 +16,9 @@ public class GameStarter : MonoBehaviour
     [SerializeField]
     private GUIActivator startGUI;
 
+    [SerializeField]
+    private TeamsUI teamsUI;
+
     public int PlayerAmount {get; private set;} = 4;
     public int PawnAmount {get; private set;} = 4;
     public bool UseTimer {get; private set;} = false;
@@ -25,6 +28,7 @@ public class GameStarter : MonoBehaviour
             throw new System.Exception("Too many players :(");
 
         startGUI.SetActive(true);
+        teamsUI.UpdateUI(PlayerAmount);
         
         for (int i = 0; i < PlayerAmount; i++)
         {

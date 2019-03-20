@@ -701,13 +701,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7220042049372889130}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.13604765, y: -0, z: -0, w: 0.99070233}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 196434219038742658}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 15.6380005, y: 0, z: 0}
 --- !u!108 &4735105996117983676
 Light:
   m_ObjectHideFlags: 0
@@ -719,7 +719,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.3
+  m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -737,7 +737,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1024
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
@@ -1044,11 +1044,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1369751676288721870}
     m_Modifications:
-    - target: {fileID: 328913881958414994, guid: fc51eba331d1a8c488814762217893b3,
-        type: 3}
-      propertyPath: m_Name
-      value: Team End tiles 4
-      objectReference: {fileID: 0}
     - target: {fileID: 8883061955071341480, guid: fc51eba331d1a8c488814762217893b3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1103,6 +1098,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 328913881958414994, guid: fc51eba331d1a8c488814762217893b3,
+        type: 3}
+      propertyPath: m_Name
+      value: Team End tiles 4
       objectReference: {fileID: 0}
     - target: {fileID: 7854867507065286103, guid: fc51eba331d1a8c488814762217893b3,
         type: 3}
@@ -1285,11 +1285,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1369751675695976935}
     m_Modifications:
-    - target: {fileID: 4200897272792427062, guid: 52357de0f10c8d54e86fdc903956d031,
-        type: 3}
-      propertyPath: m_Name
-      value: Spawn Tile 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1729028894514094168, guid: 52357de0f10c8d54e86fdc903956d031,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1354,6 +1349,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4200897272792427062, guid: 52357de0f10c8d54e86fdc903956d031,
+        type: 3}
+      propertyPath: m_Name
+      value: Spawn Tile 2
       objectReference: {fileID: 0}
     - target: {fileID: 4132654667888024577, guid: 52357de0f10c8d54e86fdc903956d031,
         type: 3}
@@ -2896,11 +2896,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1369751676288721870}
     m_Modifications:
-    - target: {fileID: 328913881958414994, guid: fc51eba331d1a8c488814762217893b3,
-        type: 3}
-      propertyPath: m_Name
-      value: Team End tiles 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8883061955071341480, guid: fc51eba331d1a8c488814762217893b3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2955,6 +2950,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 328913881958414994, guid: fc51eba331d1a8c488814762217893b3,
+        type: 3}
+      propertyPath: m_Name
+      value: Team End tiles 2
       objectReference: {fileID: 0}
     - target: {fileID: 7854867507065286103, guid: fc51eba331d1a8c488814762217893b3,
         type: 3}
@@ -3137,11 +3137,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1369751676288721870}
     m_Modifications:
-    - target: {fileID: 328913881958414994, guid: fc51eba331d1a8c488814762217893b3,
-        type: 3}
-      propertyPath: m_Name
-      value: Team End tiles 3
-      objectReference: {fileID: 0}
     - target: {fileID: 8883061955071341480, guid: fc51eba331d1a8c488814762217893b3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3196,6 +3191,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 328913881958414994, guid: fc51eba331d1a8c488814762217893b3,
+        type: 3}
+      propertyPath: m_Name
+      value: Team End tiles 3
       objectReference: {fileID: 0}
     - target: {fileID: 7854867507065286103, guid: fc51eba331d1a8c488814762217893b3,
         type: 3}
@@ -4082,11 +4082,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1369751675695976935}
     m_Modifications:
-    - target: {fileID: 4200897272792427062, guid: 52357de0f10c8d54e86fdc903956d031,
-        type: 3}
-      propertyPath: m_Name
-      value: Spawn Tile 4
-      objectReference: {fileID: 0}
     - target: {fileID: 1729028894514094168, guid: 52357de0f10c8d54e86fdc903956d031,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4142,6 +4137,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4200897272792427062, guid: 52357de0f10c8d54e86fdc903956d031,
+        type: 3}
+      propertyPath: m_Name
+      value: Spawn Tile 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4132654667888024577, guid: 52357de0f10c8d54e86fdc903956d031,
         type: 3}
       propertyPath: connectedTiles.Array.data[0]
@@ -4162,11 +4162,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1369751675695976935}
     m_Modifications:
-    - target: {fileID: 4200897272792427062, guid: 52357de0f10c8d54e86fdc903956d031,
-        type: 3}
-      propertyPath: m_Name
-      value: Spawn Tile 3
-      objectReference: {fileID: 0}
     - target: {fileID: 1729028894514094168, guid: 52357de0f10c8d54e86fdc903956d031,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4221,6 +4216,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4200897272792427062, guid: 52357de0f10c8d54e86fdc903956d031,
+        type: 3}
+      propertyPath: m_Name
+      value: Spawn Tile 3
       objectReference: {fileID: 0}
     - target: {fileID: 4132654667888024577, guid: 52357de0f10c8d54e86fdc903956d031,
         type: 3}
@@ -4844,11 +4844,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1369751675695976935}
     m_Modifications:
-    - target: {fileID: 4200897272792427062, guid: 52357de0f10c8d54e86fdc903956d031,
-        type: 3}
-      propertyPath: m_Name
-      value: Spawn Tile 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1729028894514094168, guid: 52357de0f10c8d54e86fdc903956d031,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4904,6 +4899,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4200897272792427062, guid: 52357de0f10c8d54e86fdc903956d031,
+        type: 3}
+      propertyPath: m_Name
+      value: Spawn Tile 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4132654667888024577, guid: 52357de0f10c8d54e86fdc903956d031,
         type: 3}
       propertyPath: connectedTiles.Array.data[0]
@@ -4924,11 +4924,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1369751676288721870}
     m_Modifications:
-    - target: {fileID: 328913881958414994, guid: fc51eba331d1a8c488814762217893b3,
-        type: 3}
-      propertyPath: m_Name
-      value: Team End tiles 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8883061955071341480, guid: fc51eba331d1a8c488814762217893b3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4983,6 +4978,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 328913881958414994, guid: fc51eba331d1a8c488814762217893b3,
+        type: 3}
+      propertyPath: m_Name
+      value: Team End tiles 1
       objectReference: {fileID: 0}
     - target: {fileID: 7854867507065286103, guid: fc51eba331d1a8c488814762217893b3,
         type: 3}
@@ -5068,11 +5068,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 551358622732482871}
     m_Modifications:
-    - target: {fileID: 6728508025533545026, guid: b9134e7bbd343274e8ed91fcf5f46f5b,
-        type: 3}
-      propertyPath: m_Name
-      value: crate
-      objectReference: {fileID: 0}
     - target: {fileID: 6728508025533703778, guid: b9134e7bbd343274e8ed91fcf5f46f5b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5138,6 +5133,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 400.00006
       objectReference: {fileID: 0}
+    - target: {fileID: 6728508025533545026, guid: b9134e7bbd343274e8ed91fcf5f46f5b,
+        type: 3}
+      propertyPath: m_Name
+      value: crate
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9134e7bbd343274e8ed91fcf5f46f5b, type: 3}
 --- !u!4 &796077396502609435 stripped
@@ -5156,6 +5156,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: a78d8d0b6c806b440b002d569d977bf5, type: 3}
       propertyPath: m_Name
       value: Ondergrond
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a78d8d0b6c806b440b002d569d977bf5, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a78d8d0b6c806b440b002d569d977bf5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5232,11 +5236,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 551358622732482871}
     m_Modifications:
-    - target: {fileID: 1661437098840001371, guid: 331f7affb91a06a48bd137dd21b8e182,
-        type: 3}
-      propertyPath: m_Name
-      value: finalcastle
-      objectReference: {fileID: 0}
     - target: {fileID: 2033720723200138514, guid: 331f7affb91a06a48bd137dd21b8e182,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5292,6 +5291,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1661437098840001371, guid: 331f7affb91a06a48bd137dd21b8e182,
+        type: 3}
+      propertyPath: m_Name
+      value: finalcastle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 331f7affb91a06a48bd137dd21b8e182, type: 3}
 --- !u!4 &7533069902117686707 stripped
@@ -5307,11 +5311,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 551358622732482871}
     m_Modifications:
-    - target: {fileID: 7949152840525051879, guid: 1d6f6a2863cb3d34d8e1fc1f58e23bee,
-        type: 3}
-      propertyPath: m_Name
-      value: portal
-      objectReference: {fileID: 0}
     - target: {fileID: 8388759689200467443, guid: 1d6f6a2863cb3d34d8e1fc1f58e23bee,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5376,6 +5375,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 92.021904
+      objectReference: {fileID: 0}
+    - target: {fileID: 7949152840525051879, guid: 1d6f6a2863cb3d34d8e1fc1f58e23bee,
+        type: 3}
+      propertyPath: m_Name
+      value: portal
       objectReference: {fileID: 0}
     - target: {fileID: 6586964682738536848, guid: 1d6f6a2863cb3d34d8e1fc1f58e23bee,
         type: 3}
