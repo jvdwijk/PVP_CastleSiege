@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,8 @@ public abstract class Tile : MonoBehaviour
     
     [SerializeField]
     private List<EffectType> effects = new List<EffectType>();
+
+    public event Action<Pawn> OnNewPawn;
     
     public abstract Pawn Pawn { get; }
 
@@ -31,7 +34,9 @@ public abstract class Tile : MonoBehaviour
         }
     }
 
-    public abstract void PawnEnter(Pawn pawn);
+    public virtual void PawnEnter(Pawn pawn){
+        OnNewPawn?.Invoke(pawn);
+    }
     public virtual void PawnLeave(Pawn pawn){
 
     }

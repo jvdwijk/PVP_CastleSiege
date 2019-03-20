@@ -7,9 +7,10 @@ public class Timer : MonoBehaviour
 {
     [SerializeField]
     private TurnManager turnManager;
-    [SerializeField] private Text timerText;
+    [SerializeField] 
+    private Text timerText;
+    private int currentTimer;
     public int timerMax;
-    [SerializeField] private int currentTimer;
 
     private void Awake()
     {
@@ -19,11 +20,11 @@ public class Timer : MonoBehaviour
     public void StartTimer()
     {
         StopTimer();
-        InvokeRepeating("Countdown", 1f, 1f);
+        InvokeRepeating(nameof(Countdown), 1f, 1f);
     }
 
     public void StopTimer(){
-        CancelInvoke("Countdown");
+        CancelInvoke(nameof(Countdown));
         currentTimer = timerMax;
         timerText.text = currentTimer.ToString();
     }

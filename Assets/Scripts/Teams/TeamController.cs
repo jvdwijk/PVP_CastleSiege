@@ -9,6 +9,8 @@ public class TeamController : MonoBehaviour
     [SerializeField]
     private Team currentTeam;
     [SerializeField]
+    private Transform pawnParent;
+    [SerializeField]
     private Tile spawnLocation;
     [SerializeField]
     private Tile finalTile;
@@ -36,7 +38,7 @@ public class TeamController : MonoBehaviour
         for (int i = 0; i < pawnAmount; i++)
         {
             pawns[i] = Instantiate(pawnPrefab);
-            pawns[i].transform.SetParent(transform);
+            pawns[i].transform.SetParent(pawnParent);
             pawns[i].Init(this);
             pawns[i].Movement.Path = path;
             pawns[i].SetToSpawn();
